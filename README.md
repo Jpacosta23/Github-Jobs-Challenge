@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">Github Jobs Challenge</h1>
 
 <div align="center">
    Solution for a challenge from khriztianmoreno
