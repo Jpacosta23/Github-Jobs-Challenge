@@ -8,14 +8,18 @@ const displayUser=(user)=>{
     const title=user.title;
 
     const div=document.createElement('div');
+    const div2=document.createElement("div");
     const h1=document.createElement('h1');
     const p=document.createElement('p');
     const p2=document.createElement('p');
     const img=document.createElement('img');
     
-    div.style.boxShadow="1px";
+    div.style.boxShadow="2px 2px 5px #d3d3d3";
+    div.style.display="flex";
+    div.style.margin="20px 0px"
     h1.style.font="bold";
     p.style.fontSize="normal";
+    p2.style.fontSize="20px";
     img.src=company_logo;
     img.width="150";
     img.height="150";
@@ -24,7 +28,8 @@ const displayUser=(user)=>{
     p.appendChild(document.createTextNode(`${type}`));
     p2.appendChild(document.createTextNode(`${title}`));
 
-    div.append(img,h1,p2,p);
+    div2.append(h1,p2,p);
+    div.append(img,div2);
     section.appendChild(div);
 }
 
