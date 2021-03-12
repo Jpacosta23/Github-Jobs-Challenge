@@ -1,0 +1,24 @@
+{
+  "name": "github_jobs_challenge",
+  "version": "1.0.0",
+  "description": "<!-- Please update value in the {}  -->",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./backend/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jpacosta23/Github-Jobs-Challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jpacosta23/Github-Jobs-Challenge/issues"
+  },
+  "homepage": "https://github.com/Jpacosta23/Github-Jobs-Challenge#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
