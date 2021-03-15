@@ -56,12 +56,12 @@ const getTitleFiltered=async()=>{
     const RES =await fetch(Link);
     const data=await RES.json();
     const key=document.getElementById("keyword").value.toLowerCase();
-    console.log(key,data);
-    const filtered=data.filter(job=>job.title.toLowerCase()==key);
-    console.log(filtered);
-    filtered.forEach(user=>{
-      displayJob(user);
-    })
+    const filtered=data.forEach(job=>{
+      if(job.title.toLowerCase().indexOf(key)!=-1||job.company.toLowerCase().indexOf(key)!=-1||job.location.toLowerCase().indexOf(key)!=-1||job.stack.indexOf(key)!=-1){
+        console.log(job,job.stack);
+        displayJob(job);
+      }
+    });
   }
   catch(error){
     console.log(error)
