@@ -1,7 +1,9 @@
 const Link ="http://localhost:3001/api/jobs";
 const section=document.querySelector('.section-list')
+const formulario=document.querySelector('.form');
 
-const displayUser=(user)=>{
+
+const displayJob=(user)=>{
     const company=user.company;
     const type=user.type;
     const company_logo=user.company_logo;
@@ -16,13 +18,15 @@ const displayUser=(user)=>{
     
     div.style.boxShadow="2px 2px 5px #d3d3d3";
     div.style.display="flex";
-    div.style.margin="20px 0px"
+    div.style.margin="20px 0px";
+    div.setAttribute("class","Job_Container");
     h1.style.font="bold";
     p.style.fontSize="normal";
     p2.style.fontSize="20px";
     img.src=company_logo;
     img.width="150";
     img.height="150";
+    p2.setAttribute("class","position");
 
     h1.appendChild(document.createTextNode(`${company}`));
     p.appendChild(document.createTextNode(`${type}`));
@@ -33,17 +37,42 @@ const displayUser=(user)=>{
     section.appendChild(div);
 }
 
-const getUsers= async()=>{
+const getJobs= async()=>{
     try{
       const RES =await fetch(Link);
       const data=await RES.json();
       data.forEach(user=>{
-        displayUser(user);
+        displayJob(user);
       })
     }
     catch(error){
       console.log(error)
     }
   }
+  getJobs();
 
-  getUsers();
+const getTitleFiltered=async()=>{
+  try{
+    const RES =await fetch(Link);
+    const data=await RES.json();
+    const key=document.getElementById("keyword").value.toLowerCase();
+    console.log(key,data);
+    const filtered=data.filter(job=>job.title.toLowerCase()==key);
+    console.log(filtered);
+    filtered.forEach(user=>{
+      displayJob(user);
+    })
+  }
+  catch(error){
+    console.log(error)
+  }
+}
+
+const getKeyWord=(evt)=>{
+    const div=document.querySelectorAll(".Job_Container");
+    console.log(div);
+    div.forEach(item=>item.remove());
+    getTitleFiltered();
+    evt.preventDefault();
+}
+formulario.addEventListener('submit',getKeyWord)
