@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
       <h1 class="title"><strong>Github</strong> Jobs</h1>
     </header>
     <form class="form">
-      <input type="text" id="keyword" name="keyword"  size="40">
-      <input type="submit" value="Search">
-      <p><input type="radio" id="contract" name="contract"> Full-time</p>
+      <input type="text" id="keyword" name="keyword" size="40" />
+      <input type="submit" value="Search" />
+      <p>
+        <input
+          type="checkbox"
+          id="contract"
+          name="contract"
+          value="full time"
+        />
+        Full-time
+      </p>
     </form>
-    <section class="section-list">
-    </section>
+    <form class="form2">
+      <input type="text" id="location" size="20" />
+      <p>
+        <input type="radio" name="city" value="London" />
+        London
+      </p>
+      <p>
+        <input type="radio" name="city" value="Amsterdam" />
+        Amsterdam
+      </p>
+      <p>
+        <input type="radio" name="city" value="New York" />
+        New York
+      </p>
+      <p>
+        <input type="radio" name="city" value="Berlin" />
+        Berlin
+      </p>
+    </form>
+    <section class="section-list"></section>
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
