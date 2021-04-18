@@ -72,6 +72,7 @@ $ npm install
 # Run the app
 $ npm start
 ```
+also you´ll need to download the repository "jobs-app" see how this api is consumed with REACT.
 
 ## Acknowledgements
 
@@ -83,6 +84,4 @@ $ npm start
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- GitHub [@your-username](https://{github.com/jpacosta23})
